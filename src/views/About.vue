@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>I am <a href="https://bivek.ca" target="_blank">Bivek</a>, from  🇳🇵 🇨🇦 and i love playing with 💻</h1>
   </div>
 </template>
