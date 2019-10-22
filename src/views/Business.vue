@@ -38,7 +38,7 @@ export default {
     };
   },
   methods: {
-    addbusiness(business) {
+    addBusiness(business) {
       const lastId = this.businesses.length > 0
         ? this.businesses[this.businesses.length - 1].id : 0;
       const id = lastId + 1;

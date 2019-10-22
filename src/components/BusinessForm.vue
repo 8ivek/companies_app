@@ -24,7 +24,7 @@ export default {
   methods: {
     handleSubmit() {
       console.log(this.business);
-      this.$emit('add:employee', this.business);
+      this.$emit('add:business', this.business);
     },
   },
 };
