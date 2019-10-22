@@ -1,6 +1,9 @@
 <template>
   <div id="business-list">
-    <table>
+    <p v-if="businesses.length < 1" class="empty-table">
+      No business
+    </p>
+    <table v-else>
       <thead>
         <tr>
           <th>Business Name</th>
@@ -12,7 +15,10 @@
         <tr v-for="business in businesses" :key="business.id">
           <td>{{ business.name }}</td>
           <td>{{ business.email }}</td>
-          <td>&nbsp;</td>
+          <td>
+            <button>Edit</button>
+            <button @click="$emit('delete:business', business.id)">Delete</button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -28,4 +34,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  button {
+    margin: 0 0.5rem 0 0;
+  }
+</style>
