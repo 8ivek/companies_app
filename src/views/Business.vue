@@ -2,7 +2,7 @@
   <div id="business" class="small-container">
     <h1>Business Listings</h1>
     <business-form @add:business="addBusiness" />
-    <business-list :businesses="businesses" />
+    <business-list :businesses="businesses" @delete:business="deleteBusiness" />
   </div>
 </template>
 
@@ -44,6 +44,11 @@ export default {
       const id = lastId + 1;
       const newBusiness = { ...business, id };
       this.businesses = [...this.businesses, newBusiness];
+    },
+    deleteBusiness(id) {
+      this.businesses = this.businesses.filter(
+        business => business.id !== id,
+      );
     },
   },
 };
