@@ -25,18 +25,18 @@ export default {
       businesses: [
         {
           id: 1,
-          name: 'Richard Hendricks',
-          email: 'richard@piedpiper.com',
+          name: 'Samsung Electronics',
+          email: 'infosamsung.ca',
         },
         {
           id: 2,
-          name: 'Bertram Gilfoyle',
-          email: 'gilfoyle@piedpiper.com',
+          name: 'Xerox Ltd.',
+          email: 'info@xerox.ca',
         },
         {
           id: 3,
-          name: 'Dinesh Chugtai',
-          email: 'dinesh@piedpiper.com',
+          name: 'World Vision',
+          email: 'info@worldvision.ca',
         },
       ],
     };
