@@ -2,7 +2,11 @@
   <div id="business" class="small-container">
     <h1>Business Listings</h1>
     <business-form @add:business="addBusiness" />
-    <business-list :businesses="businesses" @delete:business="deleteBusiness" />
+    <business-list
+      :businesses="businesses"
+      @delete:business="deleteBusiness"
+      @edit:business='editBusiness'
+    />
   </div>
 </template>
 
@@ -49,6 +53,12 @@ export default {
       this.businesses = this.businesses.filter(
         business => business.id !== id,
       );
+    },
+    editBusiness(id, updatedBusiness) {
+      this.businesses = this.businesses.map(
+        business => (business.id === id ? updatedBusiness : business),
+      );
+      console.log(this.businesses);
     },
   },
 };
