@@ -58,7 +58,6 @@ export default {
       this.businesses = this.businesses.map(
         business => (business.id === id ? updatedBusiness : business),
       );
-      console.log(this.businesses);
     },
   },
 };
