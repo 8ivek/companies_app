@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      apiurl: 'http://api.bivek.ca/api',
+      apiurl: 'https://api.bivek.ca/api',
       businesses: [],
     };
   },
